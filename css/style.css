@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ body {
+    margin-top: 400px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.heart {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+box-shadow: -10px 10px 90px red;
+animation:  heart 0.6s linear infinite;
+}
+.text{display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Kanit", sans-serif;
+    width: "700px";
+    & .love{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+}
+@keyframes heart {
+    0% {
+        transform:  rotate(-45deg) scale(1.00);
+    }
+    80% {
+        transform: rotate(-45deg) scale(0.90);
+    }
+    100% { 
+        transform: rotate(-45deg) scale(0.80);
+    }
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    top: -55%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px red;
+
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    right: -55%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px red;
+}
